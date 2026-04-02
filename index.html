@@ -5,32 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>💀 골학 땡시 모의고사</title>
     <style>
-        /* 기존과 동일한 모바일 최적화 디자인 */
         body { font-family: 'Helvetica', 'Arial', sans-serif; background-color: #f0f2f5; margin: 0; display: flex; justify-content: center; padding: 10px; box-sizing: border-box; min-height: 100vh; }
-        .container { background-color: white; width: 100%; max-width: 800px; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: center; display: flex; flex-direction: column; justify-content: center; }
+        .container { background-color: white; width: 100%; max-width: 800px; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: center; display: flex; flex-direction: column; justify-content: center; position: relative; }
         .screen { display: none; } 
         .active { display: block; } 
         h1 { font-size: 24px; color: #333; word-break: keep-all; }
         h2 { font-size: 18px; color: #555; word-break: keep-all; }
-        img { max-width: 100%; max-height: 35vh; object-fit: contain; border-radius: 8px; margin: 10px 0; background-color: #fff; }
-        input[type="text"] { font-size: 16px; padding: 14px; width: 90%; max-width: 400px; border: 2px solid #ccc; border-radius: 8px; outline: none; transition: 0.3s; box-sizing: border-box; margin-top: 10px; }
-        input[type="text"]:focus { border-color: #4CAF50; }
+        
+        /* 이미지 영역: 키보드가 올라와도 이미지가 너무 안 보이지 않도록 최대 높이 조정 */
+        img { max-width: 100%; max-height: 30vh; object-fit: contain; border-radius: 8px; margin: 5px 0; background-color: #fff; }
+        
+        input[type="text"] { font-size: 18px; padding: 14px; width: 90%; max-width: 400px; border: 2px solid #ccc; border-radius: 8px; outline: none; transition: 0.3s; box-sizing: border-box; font-weight: bold; text-align: center; }
+        input[type="text"]:focus { border-color: #d32f2f; box-shadow: 0 0 8px rgba(211, 47, 47, 0.2); }
+        
         button { font-size: 16px; padding: 14px 20px; cursor: pointer; border: none; border-radius: 8px; font-weight: bold; margin: 5px; transition: 0.2s; box-sizing: border-box; }
         button:active { opacity: 0.7; transform: scale(0.98); }
         .btn-start { background-color: #2196F3; color: white; font-size: 18px; width: 90%; max-width: 300px; padding: 15px; margin-top: 20px; }
         .btn-submit { background-color: #e1f5fe; color: #0277bd; }
         .btn-peek { background-color: #f5f5f5; color: #333; }
-        #timer { font-size: 24px; font-weight: bold; color: #d32f2f; margin: 5px 0; }
-        #scoreLabel { font-size: 16px; font-weight: bold; color: #555; margin-bottom: 10px; }
+        
+        /* 💡 타이머 디자인 강조 (입력창 바로 위에 위치함) */
+        #timer { font-size: 28px; font-weight: bold; color: #d32f2f; margin: 15px 0 10px 0; letter-spacing: 1px; }
+        
+        /* 진행도는 시선이 덜 가도록 작게 상단 우측 배치 */
+        #scoreLabel { font-size: 14px; font-weight: bold; color: #888; text-align: right; margin-bottom: 5px; }
+        
         #resultMsg { font-size: 18px; font-weight: bold; margin: 10px 0; min-height: 24px; word-break: keep-all; }
         .correct { color: #2e7d32; }
         .wrong { color: #c62828; }
         .info { color: #1565c0; }
+        
         .radio-group { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 20px 0; }
         .radio-group label { background-color: #f5f5f5; padding: 12px 20px; border-radius: 8px; border: 2px solid #e0e0e0; cursor: pointer; font-size: 16px; font-weight: bold; width: calc(50% - 20px); max-width: 150px; box-sizing: border-box; transition: 0.2s; }
         .radio-group input[type="radio"] { display: none; } 
         .radio-group input[type="radio"]:checked + span { color: #2196F3; }
         .radio-group label:has(input[type="radio"]:checked) { border-color: #2196F3; background-color: #e3f2fd; }
+        
+        .creator { margin-top: 30px; padding-top: 15px; border-top: 1px dashed #ddd; font-size: 13px; color: #999; font-weight: bold; letter-spacing: 0.5px; }
+        
         @media (max-width: 600px) {
             .btn-group { display: flex; flex-direction: column; align-items: center; width: 100%; }
             .btn-group button { width: 90%; max-width: 400px; margin: 5px 0; }
@@ -42,7 +54,7 @@
 <div class="container">
     
     <div id="startScreen" class="screen active">
-        <h1>💀 지옥의 골학 땡시</h1>
+        <h1>💀 골학 땡시 모의고사</h1>
         
         <h2>문항 수를 선택해주세요</h2>
         <p id="totalCountInfo" style="color: gray; font-size: 14px;">불러오는 중...</p>
@@ -58,19 +70,19 @@
     </div>
 
     <div id="examScreen" class="screen">
-        <div id="timer">⏳ 남은 시간: 30초</div>
         <div id="scoreLabel">진행도: 1 / 10</div>
         
         <img id="boneImage" src="" alt="Bone Image">
         
+        <div id="timer">⏳ 30초</div>
+        
         <div>
-            <div style="font-size: 16px; font-weight: bold;">정답 입력</div>
             <input type="text" id="answerInput" placeholder="정답을 입력하세요" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
         </div>
         
         <div id="resultMsg"></div>
         
-        <div class="btn-group" style="margin-top: 10px;">
+        <div class="btn-group" style="margin-top: 5px;">
             <button id="peekBtn" class="btn-peek" onclick="peekAnswer(false)">🔍 정답 확인</button>
             <button id="submitBtn" class="btn-submit" onclick="submitAnswer()">🚀 제출 (Enter)</button>
         </div>
@@ -82,13 +94,13 @@
         <button class="btn-start" onclick="location.reload()" style="background-color: #4CAF50;">🔄 처음부터 다시하기</button>
     </div>
 
+    <div class="creator">제작자 : Ch</div>
+
 </div>
 
 <script>
-    // 💡 1단계에서 복사한 대괄호 [ ] 목록을 바로 아랫줄에 덮어써주세요!!
+    // 🚨 파일 목록을 꼭 다시 덮어써주세요!
     const allFiles = ['acetabulum, lunate surface, acetabular notch.png', 'adductor tubercle.png', 'anterior tubercle.png', 'atlas, 윗면, anterior arch, lateral mass.png', 'axis, dens, transverse ligament of atlas.png', 'bregma, coronal suture.png', 'carotid canal, jugular foramen.png', 'carotid canal.png', 'clavicle, 오른쪽, sternal end, acromial end.png', 'condylar canal.png', 'conoid tubercle.png', 'deltoid tuberosity, radial groove.png', 'glabella.png', 'gluteal tuberosity, linea aspera.png', 'granular foveolae.png', 'groove for sigmoid sinus.png', 'head of mandible, mandibular notch_head, mandibular notch.png', 'intercondylar eminence.png', 'intercondylar fossa.png', 'intercondylar tubercles.png', 'internal acoustic meatus.png', 'ischial spine, ischial tuberosity, obturator foramen.png', 'jugular foramen.png', 'lambda, lambdoid suture.png', 'lesser trochanter, pectineal line.png', 'lingula, mental foramen.png', 'mandibular fossa.png', 'medial malleolus.png', 'olecranon fossa, medial epicondyle.png', 'optic canal, superior orbital fissure.png', 'posterior superior iliac spine, posterior inferior iliac spine.png', 'radial tuberosity.png', 'sacral hiatus, 5th sacral vertebra.png', 'sacral promontory.png', 'sella turcica.png', 'soleal line, nutrient foramen.png', 'stylomastoid foramen, facial nerve.png', 'superior articular process.png', 'supraorbital foramen.png', 'suprascapular notch.png', 'transverse foramen, bifid spinous process.png', 'trochlea, capitulum.png', 'uncinate process.png', 'vertebral foramen.png', '뒷면, 오른쪽, spine of scapula, acromion.png', '앞면, 왼쪽, greater tubercle, lesser tubercle.png', '오른쪽, anterior superior iliac spine, anterior inferior iliac spine.png', '오른쪽, medial condyle, lateral condyle.png', '오른쪽, olecranon, coronoid process.png', '왼쪽, tibial tuberosity.png']; 
-
-    // (예시) const allFiles = ['대퇴골_Femur.jpg', '견갑골_Scapula.png'];
 
     document.getElementById('totalCountInfo').innerText = `총 ${allFiles.length}개의 문제가 준비되어 있습니다.`;
 
@@ -129,7 +141,7 @@
         }
 
         const selectedCount = parseInt(document.querySelector('input[name="qCount"]:checked').value);
-        let tempFiles = [...allFiles]; // 원본 배열 복사
+        let tempFiles = [...allFiles]; 
         shuffle(tempFiles);
         examFiles = tempFiles.slice(0, Math.min(selectedCount, tempFiles.length));
 
@@ -164,8 +176,6 @@
         }
 
         const currentFileName = examFiles[currentIdx];
-        
-        // 💡 웹사이트(서버)의 images 폴더 안에 있는 사진을 불러오도록 경로 수정
         document.getElementById('boneImage').src = `./images/${currentFileName}`;
         
         const answerInput = document.getElementById('answerInput');
@@ -190,10 +200,10 @@
 
     function startTimer() {
         clearInterval(timerInterval);
-        document.getElementById('timer').innerText = `⏳ 남은 시간: ${timeLeft}초`;
+        document.getElementById('timer').innerText = `⏳ ${timeLeft}초`;
         timerInterval = setInterval(() => {
             timeLeft--;
-            document.getElementById('timer').innerText = `⏳ 남은 시간: ${timeLeft}초`;
+            document.getElementById('timer').innerText = `⏳ ${timeLeft}초`;
             if (timeLeft <= 0) {
                 submitAnswer(true);
             }
