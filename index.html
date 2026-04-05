@@ -27,7 +27,6 @@
         .btn-submit { background-color: #e1f5fe; color: #0277bd; }
         .btn-peek { background-color: #f5f5f5; color: #333; }
         
-        /* 💡 내비게이션 버튼 스타일 (이전/다음) */
         .btn-nav { background-color: #455a64; color: white; flex: 1; }
         .nav-group { display: none; width: 100%; max-width: 400px; margin: 10px auto; gap: 10px; }
 
@@ -44,6 +43,14 @@
         .option-group label:has(input:checked) { border-color: #2196F3; background-color: #e3f2fd; }
         
         .creator { margin-top: 30px; padding-top: 15px; border-top: 1px dashed #ddd; font-size: 13px; color: #999; font-weight: bold; letter-spacing: 0.5px; }
+        
+        /* 💡 추가된 오픈 카톡 제보 버튼 스타일 */
+        .btn-report { display: inline-block; margin-top: 10px; padding: 8px 16px; background-color: #FEE500; color: #3c1e1e; text-decoration: none; border-radius: 20px; font-size: 13px; font-weight: bold; transition: 0.2s; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .btn-report:hover { background-color: #f4dc00; transform: translateY(-2px); box-shadow: 0 4px 6px rgba(0,0,0,0.15); }
+
+        .update-log { margin-top: 15px; font-size: 13px; color: #666; text-align: left; background-color: #fafafa; padding: 10px 15px; border-radius: 8px; border: 1px solid #eee; }
+        .update-log summary { font-weight: bold; cursor: pointer; color: #333; outline: none; }
+        .update-log ul { margin: 10px 0 0 0; padding-left: 20px; line-height: 1.6; }
         
         @media (max-width: 600px) {
             .btn-group { display: flex; flex-direction: column; align-items: center; width: 100%; }
@@ -103,8 +110,13 @@
     </div>
 
     <div class="creator">제작자 : ch</div>
+    
+    <div>
+        <a href="https://open.kakao.com/o/sSfluUoi" target="_blank" class="btn-report">💬 오류 및 피드백 카톡 제보</a>
+    </div>
+    
     <details class="update-log">
-        <summary>📢 Update </summary>
+        <summary>📢 최근 업데이트 내역</summary>
         <ul>
             <li><b>26.04.06</b> - neck&back socrative 11문항 추가</li>
 	<li><b>26.04.05</b> - head socrative 26문항 추가</li>
@@ -114,9 +126,9 @@
 </div>
 
 <script>
-    let allFiles = []; // 엑셀에서 뽑아온 전체 목록
-    let examData = []; // 현재 풀고 있는 문제들
-    let wrongData = []; // 틀린 문제들
+    let allFiles = []; 
+    let examData = []; 
+    let wrongData = []; 
     let currentIdx = 0;
     let score = 0;
     let timeLeft = 30;
@@ -208,9 +220,8 @@
             document.getElementById('timer').innerText = `📝 오답 노트`;
             document.getElementById('timer').style.color = "#1565c0";
             document.getElementById('submitBtn').innerText = "✅ 확인/다음 (Enter)";
-            document.getElementById('navGroup').style.display = "flex"; // 💡 이동 버튼 표시
+            document.getElementById('navGroup').style.display = "flex"; 
             
-            // 이전/다음 버튼 활성/비활성 처리
             document.getElementById('prevBtn').disabled = (currentIdx === 0);
             document.getElementById('nextBtn').disabled = (currentIdx === examData.length - 1);
             
@@ -219,13 +230,12 @@
             document.getElementById('scoreLabel').innerText = `진행도: ${currentIdx + 1} / ${examData.length}`;
             document.getElementById('timer').style.color = "#d32f2f";
             document.getElementById('submitBtn').innerText = "🚀 제출 (Enter)";
-            document.getElementById('navGroup').style.display = "none"; // 💡 이동 버튼 숨김
+            document.getElementById('navGroup').style.display = "none"; 
             timeLeft = TIME_LIMIT;
             startTimer();
         }
     }
 
-    // 💡 오답노트에서 이전/다음으로 이동하는 함수
     function changeQuestion(offset) {
         currentIdx += offset;
         loadQuestion();
@@ -250,7 +260,6 @@
                 if (currentIdx < examData.length - 1) {
                     changeQuestion(1);
                 } else {
-                    // 마지막 문제면 종료 화면으로
                     currentIdx++;
                     loadQuestion();
                 }
