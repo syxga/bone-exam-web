@@ -24,6 +24,9 @@
         button:disabled { background-color: #eee !important; color: #aaa !important; cursor: not-allowed; }
 
         .btn-start { background-color: #2196F3; color: white; font-size: 18px; width: 90%; max-width: 300px; padding: 15px; margin-top: 20px; }
+        /* 💡 학습 모드 버튼 추가 */
+        .btn-learning { background-color: #4CAF50; color: white; font-size: 18px; width: 90%; max-width: 300px; padding: 15px; margin-top: 10px; }
+        
         .btn-submit { background-color: #e1f5fe; color: #0277bd; }
         .btn-peek { background-color: #f5f5f5; color: #333; }
         
@@ -42,9 +45,16 @@
         .option-group input[type="radio"], .option-group input[type="checkbox"] { display: none; } 
         .option-group label:has(input:checked) { border-color: #2196F3; background-color: #e3f2fd; }
         
+        /* 💡 학습 모드 전용 카드 CSS */
+        .learning-card { background: #fff; border: 2px solid #e0e0e0; border-radius: 12px; padding: 18px; margin-bottom: 12px; text-align: left; box-shadow: 0 4px 6px rgba(0,0,0,0.02); transition: 0.2s; }
+        .learning-card:hover { border-color: #4CAF50; box-shadow: 0 4px 12px rgba(76, 175, 80, 0.1); }
+        .lc-header { margin-bottom: 8px; font-size: 13px; color: #78909c; font-weight: bold; display: flex; align-items: center; text-transform: uppercase; }
+        .lc-question { font-size: 17px; font-weight: bold; color: #1a237e; margin-bottom: 12px; word-break: keep-all; line-height: 1.4; }
+        .lc-img { max-width: 100%; max-height: 250px; border-radius: 8px; margin: 10px 0; display: block; border: 1px solid #eee; background-color: #fff; object-fit: contain; }
+        .lc-answer { font-size: 18px; font-weight: bold; color: #2e7d32; background: #e8f5e9; padding: 12px; border-radius: 8px; margin-bottom: 8px; border-left: 4px solid #4caf50;}
+
         .creator { margin-top: 30px; padding-top: 15px; border-top: 1px dashed #ddd; font-size: 13px; color: #999; font-weight: bold; letter-spacing: 0.5px; }
         
-        /* 💡 추가된 오픈 카톡 제보 버튼 스타일 */
         .btn-report { display: inline-block; margin-top: 10px; padding: 8px 16px; background-color: #FEE500; color: #3c1e1e; text-decoration: none; border-radius: 20px; font-size: 13px; font-weight: bold; transition: 0.2s; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
         .btn-report:hover { background-color: #f4dc00; transform: translateY(-2px); box-shadow: 0 4px 6px rgba(0,0,0,0.15); }
 
@@ -79,7 +89,11 @@
             <label><input type="radio" name="qCount" value="30"><span>30문제</span></label>
             <label><input type="radio" name="qCount" value="999"><span>모두 풀기</span></label>
         </div>
-        <button class="btn-start" onclick="startExam()">🚀 시험 시작!</button>
+        
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <button class="btn-start" onclick="startExam()">🚀 시험 시작!</button>
+            <button class="btn-learning" onclick="startLearningMode()">📖 단어장 학습 모드</button>
+        </div>
     </div>
 
     <div id="examScreen" class="screen">
@@ -103,6 +117,16 @@
         </div>
     </div>
 
+    <div id="learningScreen" class="screen">
+        <h1>📖 단어장 학습 모드</h1>
+        <p id="learningCountInfo" style="color: #4CAF50; font-size: 15px; font-weight: bold; margin-bottom: 20px;"></p>
+        
+        <div id="learningListContainer" style="display: flex; flex-direction: column;">
+            </div>
+
+        <button class="btn-start" onclick="location.reload()" style="background-color: #607d8b; margin-top: 25px;">🏠 처음으로 돌아가기</button>
+    </div>
+
     <div id="endScreen" class="screen">
         <h1>🎉 학습 종료!</h1>
         <h2 id="finalMsg" style="line-height: 1.5;"></h2>
@@ -118,9 +142,10 @@
     <details class="update-log">
         <summary>📢 최근 업데이트 내역</summary>
         <ul>
+            <li><b>26.04.10</b> - 📖 정답과 이미지를 한눈에 보는 '단어장 학습 모드' 추가</li>
             <li><b>26.04.09</b> - upper&lower socrative 48문항 추가</li>
             <li><b>26.04.06</b> - neck&back socrative 11문항 추가</li>
-	<li><b>26.04.05</b> - head socrative 26문항 추가</li>
+            <li><b>26.04.05</b> - head socrative 26문항 추가</li>
         </ul>
     </details>
 
@@ -177,6 +202,38 @@
         }
     }
 
+    // 💡 추가된 학습 모드 로직
+    function startLearningMode() {
+        const selectedCategories = Array.from(document.querySelectorAll('input[name="partCategory"]:checked')).map(cb => cb.value);
+        if (selectedCategories.length === 0) { alert("학습할 파트를 최소 1개 이상 선택해주세요!"); return; }
+        
+        let filteredData = allFiles.filter(q => selectedCategories.includes(q.category));
+        if (filteredData.length === 0) { alert("선택하신 파트에 해당하는 문제가 엑셀 파일에 없습니다."); return; }
+
+        const listContainer = document.getElementById('learningListContainer');
+        listContainer.innerHTML = ""; 
+
+        filteredData.forEach(item => {
+            // 이미지 파일이 있을 때만 이미지 태그 생성
+            const imgHtml = item.file ? `<img src="./images/${item.file}" class="lc-img" alt="골학 사진" onerror="this.style.display='none'">` : '';
+            const formattedAnswer = item.answers.join(' / ');
+            
+            let cardHtml = `
+                <div class="learning-card">
+                    <div class="lc-header">[${item.category}]</div>
+                    <div class="lc-question">${item.question}${imgHtml}</div>
+                    <div class="lc-answer">👉 정답: <span>${formattedAnswer}</span></div>
+                </div>
+            `;
+            listContainer.innerHTML += cardHtml;
+        });
+
+        document.getElementById('learningCountInfo').innerText = `총 ${filteredData.length}개의 문제가 검색되었습니다.`;
+
+        showScreen('learningScreen');
+        window.scrollTo(0, 0); // 화면 맨 위로 올리기
+    }
+
     function startExam() {
         const selectedCategories = Array.from(document.querySelectorAll('input[name="partCategory"]:checked')).map(cb => cb.value);
         if (selectedCategories.length === 0) { alert("학습할 파트를 최소 1개 이상 선택해주세요!"); return; }
@@ -211,7 +268,15 @@
 
         const currentQ = examData[currentIdx];
         document.getElementById('questionText').innerText = currentQ.question;
-        document.getElementById('boneImage').src = `./images/${currentQ.file}`;
+        
+        const imgElement = document.getElementById('boneImage');
+        if (currentQ.file) {
+            imgElement.src = `./images/${currentQ.file}`;
+            imgElement.style.display = "inline-block";
+        } else {
+            imgElement.style.display = "none";
+        }
+        
         document.getElementById('answerInput').value = '';
         document.getElementById('resultMsg').innerText = '';
         isRevealed = false;
@@ -235,6 +300,8 @@
             timeLeft = TIME_LIMIT;
             startTimer();
         }
+        
+        setTimeout(() => document.getElementById('answerInput').focus(), 100);
     }
 
     function changeQuestion(offset) {
@@ -269,10 +336,10 @@
         }
 
         const answersList = examData[currentIdx].answers; 
-        const lowerAnswersList = answersList.map(a => a.toLowerCase().trim());
-        const userInput = document.getElementById('answerInput').value.toLowerCase().trim();
+        const lowerAnswersList = answersList.map(a => a.toLowerCase().trim().replace(/\s+/g, ''));
+        const userInput = document.getElementById('answerInput').value.toLowerCase().trim().replace(/\s+/g, '');
 
-        if (!isTimeout && lowerAnswersList.includes(userInput)) {
+        if (!isTimeout && userInput !== "" && lowerAnswersList.includes(userInput)) {
             score++;
         } else {
             wrongData.push(examData[currentIdx]);
@@ -288,9 +355,9 @@
         const resultMsg = document.getElementById('resultMsg');
 
         if (isReviewMode && isReviewCheck) {
-            const userInput = document.getElementById('answerInput').value.toLowerCase().trim();
-            const lowerAnswersList = answersList.map(a => a.toLowerCase().trim());
-            if (lowerAnswersList.includes(userInput)) {
+            const userInput = document.getElementById('answerInput').value.toLowerCase().trim().replace(/\s+/g, '');
+            const lowerAnswersList = answersList.map(a => a.toLowerCase().trim().replace(/\s+/g, ''));
+            if (userInput !== "" && lowerAnswersList.includes(userInput)) {
                 resultMsg.innerText = `⭕ 정답! (${formattedAnswer})`;
                 resultMsg.className = "correct";
             } else {
