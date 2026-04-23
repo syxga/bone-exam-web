@@ -16,15 +16,15 @@
         #questionText { font-size: 20px; font-weight: bold; color: #1a237e; background-color: #e8eaf6; padding: 12px; border-radius: 8px; margin: 5px 0 15px 0; word-break: keep-all; border-left: 5px solid #3f51b5; }
         img { max-width: 100%; max-height: 28vh; object-fit: contain; border-radius: 8px; margin: 5px 0; background-color: #fff; }
         
-        input[type="text"] { font-size: 18px; padding: 14px; width: 90%; max-width: 400px; border: 2px solid #ccc; border-radius: 8px; outline: none; transition: 0.3s; box-sizing: border-box; font-weight: bold; text-align: center; }
+        input[type="text"] { font-size: 18px; padding: 14px; width: 90%; max-width: 400px; border: 2px solid #ccc; border-radius: 8px; outline: none; transition: 0.3s; box-sizing: border-box; font-weight: bold; text-align: center; color: #333; }
         input[type="text"]:focus { border-color: #d32f2f; box-shadow: 0 0 8px rgba(211, 47, 47, 0.2); }
+        input[type="text"]:disabled { background-color: #f5f5f5; color: #666; }
         
         button { font-size: 16px; padding: 14px 20px; cursor: pointer; border: none; border-radius: 8px; font-weight: bold; margin: 5px; transition: 0.2s; box-sizing: border-box; }
         button:active { opacity: 0.7; transform: scale(0.98); }
         button:disabled { background-color: #eee !important; color: #aaa !important; cursor: not-allowed; }
 
         .btn-start { background-color: #2196F3; color: white; font-size: 18px; width: 90%; max-width: 300px; padding: 15px; margin-top: 20px; }
-        /* 💡 학습 모드 버튼 추가 */
         .btn-learning { background-color: #4CAF50; color: white; font-size: 18px; width: 90%; max-width: 300px; padding: 15px; margin-top: 10px; }
         
         .btn-submit { background-color: #e1f5fe; color: #0277bd; }
@@ -45,7 +45,6 @@
         .option-group input[type="radio"], .option-group input[type="checkbox"] { display: none; } 
         .option-group label:has(input:checked) { border-color: #2196F3; background-color: #e3f2fd; }
         
-        /* 💡 학습 모드 전용 카드 CSS */
         .learning-card { background: #fff; border: 2px solid #e0e0e0; border-radius: 12px; padding: 18px; margin-bottom: 12px; text-align: left; box-shadow: 0 4px 6px rgba(0,0,0,0.02); transition: 0.2s; }
         .learning-card:hover { border-color: #4CAF50; box-shadow: 0 4px 12px rgba(76, 175, 80, 0.1); }
         .lc-header { margin-bottom: 8px; font-size: 13px; color: #78909c; font-weight: bold; display: flex; align-items: center; text-transform: uppercase; }
@@ -142,10 +141,10 @@
     <details class="update-log">
         <summary>📢 최근 업데이트 내역</summary>
         <ul>
+            <li><b>26.04.10</b> - ⏱️ 시험 모드 제출 시 정답 확인창 및 엔터 연속 진행 기능 추가</li>
             <li><b>26.04.10</b> - 📖 정답과 이미지를 한눈에 보는 '단어장 학습 모드' 추가</li>
             <li><b>26.04.09</b> - upper&lower socrative 48문항 추가</li>
             <li><b>26.04.06</b> - neck&back socrative 11문항 추가</li>
-            <li><b>26.04.05</b> - head socrative 26문항 추가</li>
         </ul>
     </details>
 
@@ -161,6 +160,7 @@
     let timerInterval;
     let isReviewMode = false;
     let isRevealed = false;
+    let isExamAnswered = false; // 💡 시험 모드에서 이미 답안을 제출했는지 확인하는 변수
 
     const TIME_LIMIT = 30;
 
@@ -183,10 +183,13 @@
         }
     });
 
-    document.getElementById('answerInput').addEventListener('keypress', function(e) {
+    // 💡 글로벌 단축키 (어디서든 Enter를 누르면 다음으로 넘어가게 수정)
+    document.addEventListener('keydown', function(e) {
         if (e.key === 'Enter') {
-            e.preventDefault(); 
-            submitAnswer();
+            if (document.getElementById('examScreen').classList.contains('active')) {
+                e.preventDefault(); 
+                submitAnswer();
+            }
         }
     });
 
@@ -202,7 +205,6 @@
         }
     }
 
-    // 💡 추가된 학습 모드 로직
     function startLearningMode() {
         const selectedCategories = Array.from(document.querySelectorAll('input[name="partCategory"]:checked')).map(cb => cb.value);
         if (selectedCategories.length === 0) { alert("학습할 파트를 최소 1개 이상 선택해주세요!"); return; }
@@ -214,7 +216,6 @@
         listContainer.innerHTML = ""; 
 
         filteredData.forEach(item => {
-            // 이미지 파일이 있을 때만 이미지 태그 생성
             const imgHtml = item.file ? `<img src="./images/${item.file}" class="lc-img" alt="골학 사진" onerror="this.style.display='none'">` : '';
             const formattedAnswer = item.answers.join(' / ');
             
@@ -231,7 +232,7 @@
         document.getElementById('learningCountInfo').innerText = `총 ${filteredData.length}개의 문제가 검색되었습니다.`;
 
         showScreen('learningScreen');
-        window.scrollTo(0, 0); // 화면 맨 위로 올리기
+        window.scrollTo(0, 0); 
     }
 
     function startExam() {
@@ -277,15 +278,29 @@
             imgElement.style.display = "none";
         }
         
-        document.getElementById('answerInput').value = '';
+        // 💡 화면 리셋 초기화
+        const answerInput = document.getElementById('answerInput');
+        answerInput.value = '';
+        answerInput.disabled = false;
+        answerInput.style.borderColor = "#ccc";
+        answerInput.style.backgroundColor = "#fff";
+        
         document.getElementById('resultMsg').innerText = '';
         isRevealed = false;
+        isExamAnswered = false;
 
+        const submitBtn = document.getElementById('submitBtn');
+        const peekBtn = document.getElementById('peekBtn');
+        
         if (isReviewMode) {
             document.getElementById('scoreLabel').innerText = `📝 오답 복습 중: ${currentIdx + 1} / ${examData.length}`;
             document.getElementById('timer').innerText = `📝 오답 노트`;
             document.getElementById('timer').style.color = "#1565c0";
-            document.getElementById('submitBtn').innerText = "✅ 확인/다음 (Enter)";
+            
+            submitBtn.innerText = "✅ 확인 (Enter)";
+            submitBtn.style.backgroundColor = "#e1f5fe";
+            submitBtn.style.color = "#0277bd";
+            peekBtn.style.display = "none"; 
             document.getElementById('navGroup').style.display = "flex"; 
             
             document.getElementById('prevBtn').disabled = (currentIdx === 0);
@@ -295,13 +310,18 @@
         } else {
             document.getElementById('scoreLabel').innerText = `진행도: ${currentIdx + 1} / ${examData.length}`;
             document.getElementById('timer').style.color = "#d32f2f";
-            document.getElementById('submitBtn').innerText = "🚀 제출 (Enter)";
+            
+            submitBtn.innerText = "🚀 제출 (Enter)";
+            submitBtn.style.backgroundColor = "#e1f5fe";
+            submitBtn.style.color = "#0277bd";
+            peekBtn.style.display = "inline-block"; 
             document.getElementById('navGroup').style.display = "none"; 
+            
             timeLeft = TIME_LIMIT;
             startTimer();
         }
         
-        setTimeout(() => document.getElementById('answerInput').focus(), 100);
+        setTimeout(() => answerInput.focus(), 100);
     }
 
     function changeQuestion(offset) {
@@ -324,6 +344,11 @@
             if (!isRevealed) {
                 peekAnswer(true);
                 isRevealed = true;
+                const submitBtn = document.getElementById('submitBtn');
+                submitBtn.innerText = "다음 문제 ⏭️ (Enter)";
+                submitBtn.style.backgroundColor = "#37474f";
+                submitBtn.style.color = "white";
+                document.getElementById('answerInput').disabled = true;
             } else {
                 if (currentIdx < examData.length - 1) {
                     changeQuestion(1);
@@ -335,18 +360,48 @@
             return;
         }
 
-        const answersList = examData[currentIdx].answers; 
-        const lowerAnswersList = answersList.map(a => a.toLowerCase().trim().replace(/\s+/g, ''));
-        const userInput = document.getElementById('answerInput').value.toLowerCase().trim().replace(/\s+/g, '');
+        // 💡 시험 모드: 정답 제출 로직
+        if (!isExamAnswered) {
+            clearInterval(timerInterval); // 제출 시 타이머 정지
+            
+            const answersList = examData[currentIdx].answers; 
+            const lowerAnswersList = answersList.map(a => a.toLowerCase().trim().replace(/\s+/g, ''));
+            const userInput = document.getElementById('answerInput').value.toLowerCase().trim().replace(/\s+/g, '');
+            
+            const resultMsg = document.getElementById('resultMsg');
+            const answerInput = document.getElementById('answerInput');
 
-        if (!isTimeout && userInput !== "" && lowerAnswersList.includes(userInput)) {
-            score++;
+            if (!isTimeout && userInput !== "" && lowerAnswersList.includes(userInput)) {
+                score++;
+                resultMsg.innerText = `⭕ 정답! (${answersList[0]})`;
+                resultMsg.className = "correct";
+                answerInput.style.borderColor = "#4CAF50";
+                answerInput.style.backgroundColor = "#e8f5e9";
+            } else {
+                wrongData.push(examData[currentIdx]);
+                const formattedAnswer = answersList.join(' / ');
+                resultMsg.innerText = isTimeout 
+                    ? `⏰ 시간 초과! (정답: ${formattedAnswer})` 
+                    : `❌ 오답 (정답: ${formattedAnswer})`;
+                resultMsg.className = "wrong";
+                answerInput.style.borderColor = "#f44336";
+                answerInput.style.backgroundColor = "#ffebee";
+            }
+
+            // 버튼 상태 변경
+            answerInput.disabled = true;
+            isExamAnswered = true;
+            document.getElementById('peekBtn').style.display = "none";
+            
+            const submitBtn = document.getElementById('submitBtn');
+            submitBtn.innerText = "다음 문제 ⏭️ (Enter)";
+            submitBtn.style.backgroundColor = "#37474f";
+            submitBtn.style.color = "white";
         } else {
-            wrongData.push(examData[currentIdx]);
+            // 이미 정답을 확인한 상태에서 엔터를 누르면 다음 문제로 이동
+            currentIdx++;
+            loadQuestion();
         }
-
-        currentIdx++;
-        loadQuestion();
     }
 
     function peekAnswer(isReviewCheck = false) {
