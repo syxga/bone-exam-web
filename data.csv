@@ -1,343 +1,343 @@
-﻿분류,사진,문제,족보여부,정답1,정답2,정답3,정답4,정답5,정답6,정답7,정답8,정답9,정답10
+﻿분류,사진,문제,족보여부,전체구조,정답1,정답2,정답3,정답4,정답5,정답6,정답7,정답8,정답9,정답10
 head,glabella.jpeg,"화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,glabella,,,,,,,,,
+",o,head_full.jpg,glabella,,,,,,,,,
 head,supra orbital notch.jpeg,"화살표가 가리키는 구조의 명칭을 쓰시오.
-",,supra orbital notch,supra-orbital notch,supra orbital notch(foramen),supra orbital foramen,supra orbital foramen(notch),,,,,
+",,head_full.jpg,supra orbital notch,supra-orbital notch,supra orbital notch(foramen),supra orbital foramen,supra orbital foramen(notch),,,,,
 head,supra orbital fissure.jpeg,"1번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",,supra orbital fissure,,,,,,,,,
+",,head_full.jpg,superior orbital fissure,,,,,,,,,
 head,lacrimal bone.jpeg,"2번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",,fossa for lacrimal sac,,,,,,,,,
+",,head_full.jpg,fossa for lacrimal sac,,,,,,,,,
 head,coronal suture.jpeg,"1번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",,coronal suture,,,,,,,,,
+",,head_full3.jpg,coronal suture,,,,,,,,,
 head,bregma.jpeg,"2번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,bregma,,,,,,,,,
+",o,head_full3.jpg,bregma,,,,,,,,,
 head,lambda.jpeg,"1번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,lambda,,,,,,,,,
+",o,head_full3.jpg,lambda,,,,,,,,,
 head,sutural bone.jpeg,"2번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",,sutural bone,wormian bone,,,,,,,,
+",,head_full3.jpg,sutural bone,wormian bone,,,,,,,,
 head,groove for superior sagittal sinus.jpeg,"1번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",,groove for superior sagittal sinus,,,,,,,,,
+",,head_full4.jpg,groove for superior sagittal sinus,,,,,,,,,
 head,granular foveolae.jpeg,"2번 화살표가 가리키는 구조의 명칭을 쓰시오.
-Tip) 복수형으로 쓰시오.",,granular foveolae,granular foveolae (for arachnoid granulations),,,,,,,,
+Tip) 복수형으로 쓰시오.",,head_full4.jpg,granular foveolae,granular foveolae (for arachnoid granulations),,,,,,,,
 head,mandibular fossa.jpeg,"1번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",,mandibular fossa,,,,,,,,,
+",,head_full5.jpg,mandibular fossa,,,,,,,,,
 head,carotid canal.jpeg,"1번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,carotid canal,,,,,,,,,
+",o,head_full5.jpg,carotid canal,,,,,,,,,
 head,occipital groove.jpeg,"2번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",,occipital groove,,,,,,,,,
+",,head_full5.jpg,occipital groove,,,,,,,,,
 head,clivus.jpeg,"2번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,clivus,,,,,,,,,
+",o,head_full6.jpg,clivus,,,,,,,,,
 head,groove for greater petrosal nerve.jpeg,"1번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",,groove for greater petrosal nerve,,,,,,,,,
+",,head_full6.jpg,groove for greater petrosal nerve,,,,,,,,,
 head,groove for sigmoid sinus.jpg,"1번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",,groove for sigmoid sinus,,,,,,,,,
+",,head_full6.jpg,groove for sigmoid sinus,,,,,,,,,
 head,internal occipital crest.jpg,"2번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",,internal occipital crest,,,,,,,,,
+",,head_full6.jpg,internal occipital crest,,,,,,,,,
 head,foramen ovale.jpeg,"1번 화살표가 가리키는 구조의 명칭을 쓰고 지나는 구조물을 1개만 쓰시오.
 Tip) a,b의 형식으로 작성하시오.
-예) 구조의 명칭,지나는 구조물",o,"foramen ovale,mandible nerve","foramen ovale,accessory meningeal artery","foramen ovale,lesser petrosal nerve","foramen ovale,emissary vein",,,,,,
+예) 구조의 명칭,지나는 구조물",o,head_full5.jpg,"foramen ovale,mandible nerve","foramen ovale,accessory meningeal artery","foramen ovale,lesser petrosal nerve","foramen ovale,emissary vein",,,,,,
 head,foramen lacerum.jpeg,"2번 화살표가 가리키는 구조의 명칭을 쓰고 지나는 구조물을 1개만 쓰시오.
 Tip) a,b의 형식으로 작성하시오.
-예) 구조의 명칭,지나는 구조물",,"foramen lacerum,internal carotid artery","foramen lacerum,greater petrosal nerve",,,,,,,,
+예) 구조의 명칭,지나는 구조물",,head_full5.jpg,"foramen lacerum,internal carotid artery","foramen lacerum,greater petrosal nerve",,,,,,,,
 head,foramen magnum.jpeg,"2번 화살표가 가리키는 구조의 명칭을 쓰고 지나는 구조물을 1개만 쓰시오.
 Tip) a,b의 형식으로 작성하시오.
-예) 구조의 명칭,지나는 구조물",o,"foramen magnum,medulla oblongata","foramen magnum,meninges","foramen magnum,vertebral arteries and venous plexus","foramen magnum,meningeal branches of vertebral arteries","foramen magnum,spinal roots of accessory nerves",,,,,
+예) 구조의 명칭,지나는 구조물",o,head_full5.jpg,"foramen magnum,medulla oblongata","foramen magnum,meninges","foramen magnum,vertebral arteries and venous plexus","foramen magnum,meningeal branches of vertebral arteries","foramen magnum,spinal roots of accessory nerves",,,,,
 head,internal acoustic meatus.jpeg,"1번 화살표가 가리키는 구조의 명칭을 쓰고 지나는 구조물을 1개만 쓰시오.
 Tip) a,b의 형식으로 작성하시오.
-예) 구조의 명칭,지나는 구조물",o,"internal acoustic meatus,facial nerve","internal acoustic meatus,vestibulocochlear nerve","internal acoustic meatus,labyrinthine artery",,,,,,,
+예) 구조의 명칭,지나는 구조물",o,head_full6.jpg,"internal acoustic meatus,facial nerve","internal acoustic meatus,vestibulocochlear nerve","internal acoustic meatus,labyrinthine artery",,,,,,,
 head,hypoglossal canal.jpeg,"2번 화살표가 가리키는 구조의 명칭을 쓰고 지나는 구조물을 1개만 쓰시오.
 Tip) a,b의 형식으로 작성하시오.
-예) 구조의 명칭,지나는 구조물",o,"hypoglossal canal,hypoglossal nerve",,,,,,,,,
+예) 구조의 명칭,지나는 구조물",o,head_full6.jpg,"hypoglossal canal,hypoglossal nerve",,,,,,,,,
 head,condylar process.jpeg,"1번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,condylar process,,,,,,,,,
+",o,head_full7.jpg,condylar process,,,,,,,,,
 head,coronoid process.jpeg,"2번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,coronoid process,,,,,,,,,
+",o,head_full7.jpg,coronoid process,,,,,,,,,
 head,mandibular foramen.jpeg,"1번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",,mandibular foramen,,,,,,,,,
+",,head_full7.jpg,mandibular foramen,,,,,,,,,
 head,mental foramen.jpeg,"2번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",,mental foramen,,,,,,,,,
+",,head_full7.jpg,mental foramen,,,,,,,,,
 neck,atlas.jpeg,"전체 구조의 이름을 쓰고, 보이는 면이 윗면인지 아랫면인지 쓰시오.
 Tip) a,b의 형식으로, 보이는 면은 윗면 또는 아랫면으로 작성하시오.
-예) 구조의 명칭,윗면",,"atlas,윗면",,,,,,,,,
+예) 구조의 명칭,윗면",,atlas_full2.jpg,"atlas,윗면",,,,,,,,,
 neck,transverse foramen.jpeg,"1번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,transverse foramen,,,,,,,,,
+",o,atlas_full2.jpg,transverse foramen,,,,,,,,,
 neck,posterior tubercle.jpeg,"2번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",,posterior tubercle,,,,,,,,,
+",,atlas_full2.jpg,posterior tubercle,,,,,,,,,
 neck,axis.jpeg,"전체 구조의 명칭을 쓰시오.
-",,axis,,,,,,,,,
+",,axis_full.jpg,axis,,,,,,,,,
 neck,dens.jpeg,"화살표가 표시된 구조의 명칭을 쓰고, 이 구조의 한 면에 붙는 구조물의 명칭을 순서대로 쓰시오.
 Tip) a,b의 형식으로 쓰시오.
-예) 구조의 명칭,구조물의 명칭",o,"dens,transverse ligament of atlas","dens,transverse ligament",,,,,,,,
+예) 구조의 명칭,구조물의 명칭",o,axis_full.jpg,"dens,transverse ligament of atlas","dens,transverse ligament",,,,,,,,
 neck,uncinate process.jpeg,"화살표가 가리키는 구조의 명칭을 쓰시오.
-",,uncinate process,,,,,,,,,
+",,cervical_full4.jpg,uncinate process,,,,,,,,,
 neck,superior articular facet.jpeg,"화살표가 표시된 구조의 명칭을 쓰고, 이 구조와 관절하는 구조물의 명칭을 순서대로 쓰시오.
 Tip) a,b의 형식으로 쓰시오.
-예) 구조의 명칭, 구조물의 명칭",o,"superior articular facet, occipital condyle",,,,,,,,,
+예) 구조의 명칭, 구조물의 명칭",o,thoracic_full6.jpg,"superior articular facet, occipital condyle",,,,,,,,,
 neck,transverse process.jpeg,"화살표가 가리키는 구조의 명칭을 쓰시오.
-",,transverse process,,,,,,,,,
+",,thoracic_full6.jpg,transverse process,,,,,,,,,
 neck,mammillary process.jpeg,"화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,mammillary process,,,,,,,,,
+",o,lumbar_full.jpg,mammillary process,,,,,,,,,
 neck,promontory.jpeg,"화살표가 가리키는 구조의 명칭을 쓰시오.
-",,promontory,,,,,,,,,
+",,sacrum_full.jpg,promontory,,,,,,,,,
 neck,lateral sacral crest.jpeg,"화살표가 가리키는 구조의 명칭을 쓰고 이 구조의 기원을 순서대로 쓰시오.
 Tip) a,b의 형식으로 쓰시오.
-예) 구조의 명칭,구조의 기원",,"lateral sacral crest,transverse process",,,,,,,,,
+예) 구조의 명칭,구조의 기원",,sacrum_full2.jpg,"lateral sacral crest,transverse process",,,,,,,,,
 upper,clavicle.jpg,"전체 구조의 이름을 쓰고, 왼쪽/오른쪽 중 어느 쪽 구조물
 인지 쓰시오.
 Tip) a,b의 형식으로 작성하시오.
 예) 구조의 명칭,왼쪽 or 오른쪽
 어느 쪽 구조인지는 왼쪽 또는 오른쪽으로 정확히 쓰시
-오.(좌, 우, Lt, Rt→오답처리)",,"clavicle,오른쪽",,,,,,,,,
+오.(좌, 우, Lt, Rt→오답처리)",,clavicle_full.jpg,"clavicle,오른쪽",,,,,,,,,
 upper,acromial end.jpg,"1번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",,acromial end,,,,,,,,,
+",,clavicle_full.jpg,acromial end,,,,,,,,,
 upper,sternal end.jpg,"2번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",,sternal end,,,,,,,,,
+",,clavicle_full.jpg,sternal end,,,,,,,,,
 upper,impression for costoclavicular ligament.jpg,"2번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",,impression for costoclavicular ligament,,,,,,,,,
+",,clavicle_full.jpg,impression for costoclavicular ligament,,,,,,,,,
 upper,scapula.jpg,"보이는 구조의 앞면인지 뒷면인지 쓰고, 왼쪽/오른쪽 중 어느 쪽 구조물인지 순서대로 쓰시오.
 Tip) a,b의 형식으로 작성하시오.
-예) 앞면,왼쪽",o,"앞면,오른쪽",,,,,,,,,
+예) 앞면,왼쪽",o,scapula_full.jpg,"앞면,오른쪽",,,,,,,,,
 upper,acromion.jpg,"1번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,acromion,,,,,,,,,
+",o,scapula_full.jpg,acromion,,,,,,,,,
 upper,coracoid process.jpg,"2번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,coracoid process,,,,,,,,,
+",o,scapula_full.jpg,coracoid process,,,,,,,,,
 upper,suprascapular notch.jpg,"화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,suprascapular notch,,,,,,,,,
+",o,scapula_full.jpg,suprascapular notch,,,,,,,,,
 upper,humerus.jpg,"보이는 구조의 앞면인지 뒷면인지 쓰고, 왼쪽/오른쪽 중 어느 쪽 구조물인지 순서대로 쓰시오.
 Tip) a,b의 형식으로 작성하시오.
-예) 앞면,왼쪽",o,"앞면,오른쪽",,,,,,,,,
+예) 앞면,왼쪽",o,scapula_full.jpg,"앞면,오른쪽",,,,,,,,,
 upper,greater tubercle.jpg,"1번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",,greater tubercle,,,,,,,,,
+",,scapula_full.jpg,greater tubercle,,,,,,,,,
 upper,lesser tubercle.jpg,"2번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",,lesser tubercle,,,,,,,,,
+",,scapula_full.jpg,lesser tubercle,,,,,,,,,
 upper,radial groove.jpg,"1번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",,radial groove,,,,,,,,,
+",,scapula_full2.jpg,radial groove,,,,,,,,,
 upper,olecranon fossa.jpg,"2번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",,olecranon fossa,,,,,,,,,
+",,scapula_full2.jpg,olecranon fossa,,,,,,,,,
 upper,intertubercular sulcus.jpg,"1번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,intertubercular sulcus,intertubercular groove,,,,,,,,
+",o,scapula_full.jpg,intertubercular sulcus,intertubercular groove,,,,,,,,
 upper,radial fossa.jpg,"2번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",,radial fossa,,,,,,,,,
+",,scapula_full.jpg,radial fossa,,,,,,,,,
 upper,coronoid fossa.jpg,"1번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,coronoid fossa,,,,,,,,,
+",o,scapula_full.jpg,coronoid fossa,,,,,,,,,
 upper,capitulum.jpg,"2번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",,capitulum,,,,,,,,,
+",,scapula_full.jpg,capitulum,,,,,,,,,
 upper,ulna.jpg,"전체 구조의 이름을 쓰고, 왼쪽/오른쪽 중 어느 쪽 구조물
 인지 쓰시오.
 Tip) a,b의 형식으로 작성하시오.
 예) 구조의 명칭,왼쪽 or 오른쪽
 어느 쪽 구조인지는 왼쪽 또는 오른쪽으로 정확히 쓰시
-오.(좌, 우, Lt, Rt→오답처리)",o,"ulna,오른쪽",,,,,,,,,
+오.(좌, 우, Lt, Rt→오답처리)",o,ulna_full.jpg,"ulna,오른쪽",,,,,,,,,
 upper,trochlear notch.jpg,"1번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",,trochlear notch,,,,,,,,,
+",,ulna_full.jpg,trochlear notch,,,,,,,,,
 upper,coronoid process.jpg,"2번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,coronoid process,coronoid process of ulna,,,,,,,,
+",o,ulna_full.jpg,coronoid process,coronoid process of ulna,,,,,,,,
 upper,radial tuberosity.jpg,"1번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,radial tuberosity,,,,,,,,,
+",o,ulna_full.jpg,radial tuberosity,,,,,,,,,
 upper,hip bone.jpg,"전체 구조의 이름을 쓰고, 왼쪽/오른쪽 중 어느 쪽 구조물
 인지 쓰시오.
 Tip) a,b의 형식으로 작성하시오.
 예) 구조의 명칭,왼쪽 or 오른쪽
 어느 쪽 구조인지는 왼쪽 또는 오른쪽으로 정확히 쓰시
-오.(좌, 우, Lt, Rt→오답처리)",,"hip bone,왼쪽","coxal bone,왼쪽",,,,,,,,
+오.(좌, 우, Lt, Rt→오답처리)",,hip bone_full.jpg,"hip bone,왼쪽","coxal bone,왼쪽",,,,,,,,
 upper,anterior superior iliac spine.jpg,"1번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",,anterior superior iliac spine,,,,,,,,,
+",,hip bone_full.jpg,anterior superior iliac spine,,,,,,,,,
 upper,anterior inferior iliac spine.jpg,"2번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",,anterior inferior iliac spine,,,,,,,,,
+",,hip bone_full.jpg,anterior inferior iliac spine,,,,,,,,,
 upper,greater sciatic notch.jpg,"1번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",,greater sciatic notch,,,,,,,,,
+",,hip bone_full.jpg,greater sciatic notch,,,,,,,,,
 upper,posterior inferior iliac spine.jpg,"2번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",,posterior inferior iliac spine,,,,,,,,,
+",,hip bone_full.jpg,posterior inferior iliac spine,,,,,,,,,
 upper,acetabulum.jpg,"1번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,acetabulum,,,,,,,,,
+",o,hip bone_full.jpg,acetabulum,,,,,,,,,
 upper,lunate surface.jpg,"2번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,lunate surface,,,,,,,,,
+",o,hip bone_full.jpg,lunate surface,,,,,,,,,
 upper,pubic tubercle.jpg,"3번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",,pubic tubercle,,,,,,,,,
+",,hip bone_full.jpg,pubic tubercle,,,,,,,,,
 upper,pubic tubercle2.jpg,"1번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",,pubic tubercle,,,,,,,,,
+",,hip bone_full2.jpg,pubic tubercle,,,,,,,,,
 upper,ischial tuberosity.jpg,"2번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",,ischial tuberosity,,,,,,,,,
+",,hip bone_full2.jpg,ischial tuberosity,,,,,,,,,
 upper,pectineal line2.jpg,"3번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",,pectineal line,,,,,,,,,
+",,hip bone_full2.jpg,pectineal line,,,,,,,,,
 upper,femur.jpg,"전체 구조의 이름을 쓰고, 왼쪽/오른쪽 중 어느 쪽 구조물
 인지 쓰시오.
 Tip) a,b의 형식으로 작성하시오.
 예) 구조의 명칭,왼쪽 or 오른쪽
 어느 쪽 구조인지는 왼쪽 또는 오른쪽으로 정확히 쓰시
-오.(좌, 우, Lt, Rt→오답처리)",,"femur,오른쪽",,,,,,,,,
+오.(좌, 우, Lt, Rt→오답처리)",,femur_full.jpg,"femur,오른쪽",,,,,,,,,
 upper,lateral epicondyle.jpg,"1번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",,lateral epicondyle,,,,,,,,,
+",,femur_full.jpg,lateral epicondyle,,,,,,,,,
 upper,medial epicondyle.jpg,"2번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",,medial epicondyle,,,,,,,,,
+",,femur_full.jpg,medial epicondyle,,,,,,,,,
 upper,adductor tubercle.jpg,"화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,adductor tubercle,,,,,,,,,
+",o,femur_full.jpg,adductor tubercle,,,,,,,,,
 upper,lesser trochanter.jpg,"1번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",,lesser trochanter,,,,,,,,,
+",,femur_full.jpg,lesser trochanter,,,,,,,,,
 upper,intertrochanteric crest.jpg,"2번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",,intertrochanteric crest,,,,,,,,,
+",,femur_full.jpg,intertrochanteric crest,,,,,,,,,
 upper,pectineal line.jpg,"1번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,pectineal line,,,,,,,,,
+",o,femur_full.jpg,pectineal line,,,,,,,,,
 upper,gluteal tuberosity.jpg,"2번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",,gluteal tuberosity,,,,,,,,,
+",,femur_full.jpg,gluteal tuberosity,,,,,,,,,
 upper,linea aspera.jpg,"1번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",,linea aspera (medial lip),linea aspera,medial lip,,,,,,,
+",,femur_full.jpg,linea aspera (medial lip),linea aspera,medial lip,,,,,,,
 upper,linea aspera2.jpg,"2번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",,linea aspera (lateral lip),linea aspera,lateral lip,,,,,,,
+",,femur_full.jpg,linea aspera (lateral lip),linea aspera,lateral lip,,,,,,,
 upper,fibula.jpg,"전체 구조의 이름을 쓰고, 왼쪽/오른쪽 중 어느 쪽 구조물
 인지 쓰시오.
 Tip) a,b의 형식으로 작성하시오.
 예) 구조의 명칭,왼쪽 or 오른쪽
 어느 쪽 구조인지는 왼쪽 또는 오른쪽으로 정확히 쓰시
-오.(좌, 우, Lt, Rt→오답처리)",,"fibula,오른쪽",,,,,,,,,
+오.(좌, 우, Lt, Rt→오답처리)",,tibia_full.jpg,"fibula,오른쪽",,,,,,,,,
 upper,apex of fibula.jpg,"화살표가 가리키는 구조의 명칭을 쓰시오.
-",,apex of fibula,apex,,,,,,,,
+",,tibia_full.jpg,apex of fibula,apex,,,,,,,,
 upper,tibial tuberosity.jpg,"화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,tibial tuberosity,,,,,,,,,
+",o,tibia_full.jpg,tibial tuberosity,,,,,,,,,
 upper,medial malleolus.jpg,"화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,medial malleolus,,,,,,,,,
+",o,tibia_full.jpg,medial malleolus,,,,,,,,,
 upper,intercondylar eminence.jpg,"화살표가 가리키는 구조의 명칭을 쓰시오.
-Tip) 각각의 명칭이 아닌, 화살표가 가리키는 둘을 합쳐 이르는 명칭을 쓰시오.",,intercondylar eminence,intercondylar tubercles of intercondylar eminence,,,,,,,,
+Tip) 각각의 명칭이 아닌, 화살표가 가리키는 둘을 합쳐 이르는 명칭을 쓰시오.",,tibia_full.jpg,intercondylar eminence,intercondylar tubercles of intercondylar eminence,,,,,,,,
 upper,soleal line.jpg,"1번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,soleal line,,,,,,,,,
+",o,tibia_full.jpg,soleal line,,,,,,,,,
 upper,nutrient foramen.jpg,"2번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",,nutrient foramen,,,,,,,,,
+",,tibia_full.jpg,nutrient foramen,,,,,,,,,
 head,lateral plate.jpg,"1번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",,lateral plate,,,,,,,,,
+",,head_full5.jpg,lateral plate,,,,,,,,,
 head,medial plate.jpg,"2번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",,medial plate,,,,,,,,,
+",,head_full5.jpg,medial plate,,,,,,,,,
 head,groove for middle meningeal vessels.jpg,"1번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",,groove for middle meningeal vessels,groove for middle meningeal vessels(frontal branches),,,,,,,,
+",,head_full5.jpg,groove for middle meningeal vessels,groove for middle meningeal vessels(frontal branches),,,,,,,,
 head,trigeminal impression.jpg,"2번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,trigeminal impression,,,,,,,,,
+",o,head_full6.jpg,trigeminal impression,,,,,,,,,
 head,groove for meningeal vessels(parietal branches).jpg,"2번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",,groove for middle meningeal vessels(parietal branches),,,,,,,,,
+",,head_full6.jpg,groove for middle meningeal vessels(parietal branches),,,,,,,,,
 head,cerebellar fossa.jpg,"1번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,cerebellar fossa,,,,,,,,,
+",o,head_full6.jpg,cerebellar fossa,,,,,,,,,
 upper,clavicle2.jpg,"전체 구조의 이름을 쓰고, 보이는 면이 윗면인지 아랫면인지 쓰시오.
 Tip) a,b의 형식으로 작성하시오.
-예) 구조의 이름,윗면",,"clavicle,아랫면",,,,,,,,,
+예) 구조의 이름,윗면",,clavicle_full.jpg,"clavicle,아랫면",,,,,,,,,
 upper,conoid tubercle.jpg,"1번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",,conoid tubercle,,,,,,,,,
+",,clavicle_full.jpg,conoid tubercle,,,,,,,,,
 upper,styloid process.jpg,"2번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,styloid process,,,,,,,,,
+",o,ulna_full.jpg,styloid process,,,,,,,,,
 head,parietal foramen.jpg,"화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,parietal foramen,,,,,,,,,
+",o,head_full3.jpg,parietal foramen,,,,,,,,,
 head,greater palatine foramen.jpg,"화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,greater palatine foramen,,,,,,,,,
+",o,head_full5.jpg,greater palatine foramen,,,,,,,,,
 head,stylomastoid foramen.jpg,"3번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,stylomastoid foramen,,,,,,,,,
+",o,head_full5.jpg,stylomastoid foramen,,,,,,,,,
 head,foramen rotundum.jpg,"파란색 화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,foramen rotundum,,,,,,,,,
+",o,head_full6.jpg,foramen rotundum,,,,,,,,,
 head,lingula.jpg,"파란색 화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,lingula,,,,,,,,,
+",o,head_full7.jpg,lingula,,,,,,,,,
 head,crista galli.jpg,"3번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,crista galli,,,,,,,,,
+",o,head_full6.jpg,crista galli,,,,,,,,,
 rib,costal notch.jpg,"A에 들어갈 구조의 명칭을 쓰고, 이 구조와 관절하는 구조물의 명칭을 순서대로 쓰시오.
 Tip) a,b의 형식으로 쓰시오.
-예) 구조의 명칭, 구조물의 명칭",o,"costal notch,costal cartilage",,,,,,,,,
+예) 구조의 명칭, 구조물의 명칭",o,sternum_full.jpg,"costal notch,costal cartilage",,,,,,,,,
 neck,anterior tubercle.jpg,"화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,anterior tubercle,,,,,,,,,
+",o,atlas_full2.jpg,anterior tubercle,,,,,,,,,
 rib,tubercle of rib.jpg,"화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,tubercle of rib,,,,,,,,,
-neck,inferior articular facet.jpg,"화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,inferior articular facet,,,,,,,,,
+",o,rib_full.jpg,tubercle of rib,,,,,,,,,
+neck,inferior articular facet.jpg,"파란 화살표가 가리키는 구조면의 명칭을 쓰시오.
+",o,axis_full.jpg,inferior articular facet,,,,,,,,,
 neck,vertebral body.jpg,"화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,vertebral body,,,,,,,,,
+",o,vertebral_full.jpg,vertebral body,,,,,,,,,
 upper,deltoid tuberosity.jpg,"파란색 화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,deltoid tuberosity,,,,,,,,,
+",o,scapula_full.jpg,deltoid tuberosity,,,,,,,,,
 upper,ulnar tuberosity.jpg,"화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,ulnar tuberosity,,,,,,,,,
+",o,ulna_full.jpg,ulnar tuberosity,,,,,,,,,
 upper,groove for extensor pollicis longus muscle.jpg,"화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,groove for extensor pollicis longus muscle,,,,,,,,,
+",o,ulna_full.jpg,groove for extensor pollicis longus muscle,,,,,,,,,
 upper,posterior gluteal line.jpg,"빨간선이 가리키는 구조의 명칭을 쓰시오.
-",o,posterior gluteal line,,,,,,,,,
+",o,hip bone_full.jpg,posterior gluteal line,,,,,,,,,
 upper,inferior gluteal line.jpg,"빨간선이 가리키는 구조의 명칭을 쓰시오.
-",o,inferior gluteal line,,,,,,,,,
+",o,hip bone_full.jpg,inferior gluteal line,,,,,,,,,
 upper,obturator groove.jpg,"화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,obturator groove,,,,,,,,,
+",o,hip bone_full.jpg,obturator groove,,,,,,,,,
 upper,acetabular fossa.jpg,"화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,acetabular fossa,,,,,,,,,
+",o,hip bone_full.jpg,acetabular fossa,,,,,,,,,
 upper,arcuate line.jpg,"빨간선이 가리키는 구조의 명칭을 쓰시오.
-",o,arcuate line,arcuate line of ilium,,,,,,,,
+",o,hip bone_full2.jpg,arcuate line,arcuate line of ilium,,,,,,,,
 upper,intercondylar fossa.jpg,"화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,intercondylar fossa,,,,,,,,,
+",o,femur_full.jpg,intercondylar fossa,,,,,,,,,
 upper,groove for tendons of tibialis posterior.jpg,"화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,groove for tendons of tibialis posterior,,,,,,,,,
+",o,tibia_full.jpg,groove for tendons of tibialis posterior,,,,,,,,,
 upper,ala of ilium.jpg,"화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,ala of ilium,ala,,,,,,,,
+",o,hip bone_full.jpg,ala of ilium,ala,wing of ilium,,,,,,,
 head,vomer.jpg,"화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,vomer,,,,,,,,,
+",o,head_full5.jpg,vomer,,,,,,,,,
 neck,11 rib.jpg,"전체 구조의 이름을 쓰시오.
 Tip) 몇번째 구조물인지도 함께 쓰시오.
-예) 2nd rib",o,11th rib,,,,,,,,,
+예) 2nd rib",o,rib_full.jpg,11th rib,,,,,,,,,
 head,zygomaticofacial foramen.jpg,"화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,zygomaticofacial foramen,,,,,,,,,
+",o,head_full2.jpg,zygomaticofacial foramen,,,,,,,,,
 head,external occipital protuberance.jpg,"다음 구조의 명칭을 쓰시오.
-",o,external occipital protuberance,inion,,,,,,,,
+",o,head_fullinterior.jpg,external occipital protuberance,inion,,,,,,,,
 upper,olecranon.jpg,"화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,olecranon,olecranon of ulna,,,,,,,,
+",o,ulna_full.jpg,olecranon,olecranon of ulna,,,,,,,,
 upper,ischial spine.jpg,"화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,ischial spine,,,,,,,,,
+",o,hip bone_full2.jpg,ischial spine,,,,,,,,,
 upper,greater trochanter.jpg,"화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,greater trochanter,,,,,,,,,
+",o,femur_full.jpg,greater trochanter,,,,,,,,,
 rib,sternum.jpg,"화살표가 표시된 구조의 명칭을 쓰고, 이 구조와 관절하는 구조물의 명칭을 순서대로 쓰시오.
 Tip) a,b의 형식으로 쓰시오.
-예) 구조의 명칭, 구조물의 명칭",o,"sternum,dens",,,,,,,,,
+예) 구조의 명칭, 구조물의 명칭",o,sternum_full.jpg,"sternum,dens",,,,,,,,,
 neck,thoracic vertebrae.jpg,"전체 구조의 명칭을 쓰시오.
-",o,thoracic vertebrae,,,,,,,,,
+",o,thoracic_full.jpg,thoracic vertebrae,,,,,,,,,
 neck,cervical vertebrae 7.jpg,"전체 구조의 이름을 쓰시오.
 Tip) 몇번째 구조물인지도 함께 쓰시오.
-예) 2nd rib or C2",o,7th cervical vertebrae,C7,,,,,,,,
+예) 2nd rib or C2",o,c7_full.jpg,7th cervical vertebrae,C7,,,,,,,,
 neck,superior articular process.jpg,"화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,superior articular process,,,,,,,,,
+",o,vertebral_full,superior articular process,,,,,,,,,
 neck,median sacral crest.jpg,"화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,median sacral crest,,,,,,,,,
+",o,sacrum_full2.jpg,median sacral crest,,,,,,,,,
 rib,scalene tubercle.jpg,"화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,scalene tubercle,,,,,,,,,
+",o,rib_full2.jpg,scalene tubercle,,,,,,,,,
 head,zygomatic arch.jpg,"화살표가 가리키는 전체 구조의 명칭을 쓰시오.
-",o,zygomatic arch,,,,,,,,,
+",o,head_full2.jpg,zygomatic arch,,,,,,,,,
 neck,coccygeal cornu.jpg,"화살표가 가리키는 구조의 명칭을 쓰고 이 구조의 기원을 순서대로 쓰시오.
 Tip) a,b의 형식으로 쓰시오.
-예) 구조의 명칭,구조의 기원",o,"coccygeal cornu,superior articular process",,,,,,,,,
+예) 구조의 명칭,구조의 기원",o,sacrum_full2.jpg,"coccygeal cornu,superior articular process",,,,,,,,,
 rib,costal groove.jpg,"화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,costal grove,,,,,,,,,
+",o,rib_full.jpg,costal grove,,,,,,,,,
 head,medial plate of pterygoid process.jpg,"화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,medial plate of pterygoid process,medial pterygoid plate,,,,,,,,
+",o,head_full5.jpg,medial plate of pterygoid process,medial pterygoid plate,,,,,,,,
 head,pterygoid fossa.jpg,"화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,pterygoid fossa,,,,,,,,,
+",o,head_full5.jpg,pterygoid fossa,,,,,,,,,
 upper,trochlea.jpg,"화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,trochlea,,,,,,,,,
+",o,scapula_full.jpg,trochlea,,,,,,,,,
 head,mental protuberance.jpg,"화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,mental protuberance,,,,,,,,,
+",o,head_full7.jpg,mental protuberance,,,,,,,,,
 upper,calcaneus.jpg,"화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,calcaneus,,,,,,,,,
+",o,foot_full.jpg,calcaneus,,,,,,,,,
 head,occipital condyle.jpg,"화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,occipital condyle,,,,,,,,,
+",o,head_full5.jpg,occipital condyle,,,,,,,,,
 head,mastoid process.jpg,"화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,mastoid process,,,,,,,,,
+",o,head_full2.jpg,mastoid process,,,,,,,,,
 head,infra orbital foramen.jpg,"화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,infra orbital foramen,,,,,,,,,
+",o,head_full.jpg,infra orbital foramen,,,,,,,,,
 head,hypophyseal fossa.jpg,"파란색 화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,hypophyseal fossa,,,,,,,,,
+",o,head_full6.jpg,hypophyseal fossa,,,,,,,,,
 head,alveolar process.jpg,"화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,alveolar process,,,,,,,,,
+",o,head_full.jpg,alveolar process,,,,,,,,,
 head,nasion.jpg,"화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,naison,,,,,,,,,
+",o,head_full.jpg,naison,,,,,,,,,
 upper,lateral malleolus.jpg,"화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,lateral malleolus,,,,,,,,,
+",o,tibia_full.jpg,lateral malleolus,,,,,,,,,
 upper,medial condyle.jpg,"화살표가 가리키는 구조의 명칭을 쓰시오.
-",o,medial condyle,medial condyle of femur,,,,,,,,
+",o,femur_full.jpg,medial condyle,medial condyle of femur,,,,,,,,
 rib,subclavian vein.jpg,"화살표가 가리키는 곳을 지나는 구조물의 명칭을 쓰시오.
-",o,subclavian vein,,,,,,,,,
+",o,rib_full2.jpg,subclavian vein,,,,,,,,,
 rib,2nd rib.jpg,"전체 구조의 이름을 쓰시오.
 Tip) 몇번째 구조물인지도 함께 쓰시오.
-예) 1st rib",o,2nd rib,,,,,,,,,
+예) 1st rib",o,rib_full2.jpg,2nd rib,,,,,,,,,
 neck,coccyx.jpg,"다음 구조의 명칭을 쓰시오.
-",o,coccyx,,,,,,,,,
+",o,sacrum_full.jpg,coccyx,,,,,,,,,
 neck,hyoid bone.jpg,"전체 구조의 명칭을 쓰시오.
-",o,hyoid bone,,,,,,,,,
+",o,,hyoid bone,,,,,,,,,
 upper,transverse tarsal joint.jpg,"다음 관절의 명칭을 쓰시오.
-",o,transverse tarsal joint,,,,,,,,,
+",o,foot_full.jpg,transverse tarsal joint,,,,,,,,,
 head,groove for middle meningeal vessels.jpg,"2번 화살표가 가리키는 구조의 명칭을 쓰시오.
-",,Groove for middle meningeal vessels,Groove for middle meningeal vessels(perietal branches),,,,,,,,
+",,head_full5.jpg,Groove for middle meningeal vessels,Groove for middle meningeal vessels(perietal branches),,,,,,,,
